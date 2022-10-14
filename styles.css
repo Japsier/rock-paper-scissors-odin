@@ -16,25 +16,53 @@ body {
     padding: 5px;
 }
 
+.middle {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
 .content {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
-
-
+    margin: 70px;
+    gap: 40px;
 }
+.meat {
+    display: flex;
+    gap: 150px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+.user, .comp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.compIcon, .userIcon {
+    font-size: 100px
+}
+.emoji1, .emoji2 {
+    align-self: center;
+    font-size: 100px;
+}
+
 .points {
     display: flex;
-    gap: 50px;
+    gap: 100px;
 }
 .buttons {
     display: flex;
     justify-content: center;
     gap: 70px;
-    margin-bottom: 250px;
+    margin-bottom: 100px;
 
 }
 button {
@@ -46,9 +74,10 @@ button:hover {
     background-color: #CF9FFF;
     
 }
-.results {
+#results {
     font-size: 32px;
     font-weight: 500px;
+    text-align: center;
 
 }
 .winner {

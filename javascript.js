@@ -5,7 +5,10 @@ const scissorsButton = document.querySelector("#scissors");
 const divResults = document.querySelector("#results");
 const divPointsUser = document.querySelector("#pointsUser");
 const divPointsComp = document.querySelector("#pointsComp");
-const divWinner = document.querySelector("#winner");
+const iconUser = document.querySelector(".userIcon");
+const iconComp = document.querySelector(".compIcon");
+const emoji1 = document.querySelector(".emoji1");
+const emoji2 = document.querySelector(".emoji2");
 
 let userPointsCounter = 0;
 let compPointsCounter = 0;
@@ -14,18 +17,27 @@ let compPointsCounter = 0;
 
 function checkWinner() {
     if (userPointsCounter === 5) {
-        divWinner.innerText = "You have won, congratulations!";
+        divResults.innerText = "Congrats, You have won the game!"
+        emoji1.innerText = "🎉"
+        emoji2.innerText = "🎉"
+        iconComp.innerText = "🖥️"
+        iconUser.innerText = "👤"
         userPointsCounter = 0;
         compPointsCounter = 0;
-    } else if (compPointsCounter === 5){
-        divWinner.innerText = "You have lost, please try harder!";
+    } else if (compPointsCounter === 5) {
+        divResults.innerText = "You have lost, try harder next time!"
+        emoji1.innerText = "❌"
+        emoji2.innerText = "❌"
+        iconComp.innerText = "🖥️"
+        iconUser.innerText = "👤"
         compPointsCounter = 0;
         userPointsCounter = 0;
 
     }
 }
 function clearWinners() {
-    divWinner.innerText = ""
+    emoji1.innerText = " ";
+    emoji2.innerText = " ";
 }
 
 function updatePoints() {
@@ -38,10 +50,13 @@ function updatePoints() {
 function getComputerChoice() {
     num = Math.floor(Math.random() * 3) + 1;
     if (num === 1) {
+        iconComp.innerText = "🪨"
         return "rock"
     } else if (num === 2) {
+        iconComp.innerText = "🧻"
         return "paper"
     } else {
+        iconComp.innerText = "✂️"
         return "scissors"
     }
     
@@ -104,11 +119,14 @@ function simulateGame(userChoice, computerChoice) {
 
 
 rockButton.addEventListener("click", () => {
+    iconUser.innerText = "🪨";
     simulateGame("rock", getComputerChoice());
 });
 paperButton.addEventListener("click", () => {
+    iconUser.innerText = "🧻";
     simulateGame("paper", getComputerChoice());
 });
 scissorsButton.addEventListener("click", () => {
+    iconUser.innerText = "✂️";
     simulateGame("scissors", getComputerChoice());
 });
