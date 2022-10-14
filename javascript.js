@@ -130,3 +130,24 @@ scissorsButton.addEventListener("click", () => {
     iconUser.innerText = "✂️";
     simulateGame("scissors", getComputerChoice());
 });
+
+rockButton.addEventListener("mouseover", () => {
+    rockButton.innerText = "🪨"
+})
+rockButton.addEventListener("mouseout", () => {
+    rockButton.innerText = "Rock"
+})
+
+paperButton.addEventListener("mouseover", () => {
+    paperButton.innerText = "🧻"
+})
+paperButton.addEventListener("mouseout", () => {
+    paperButton.innerText = "Paper"
+})
+
+scissorsButton.addEventListener("mouseover", () => {
+    scissorsButton.innerText = "✂️"
+})
+scissorsButton.addEventListener("mouseout", () => {
+    scissorsButton.innerText = "Scissors"
+})

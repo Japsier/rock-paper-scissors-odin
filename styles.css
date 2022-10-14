@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: #222222;
+    background-color: #111111;
     color: white;
     height: 100vh;
     justify-content: space-between;
@@ -13,9 +13,13 @@ body {
     background-color: #000000;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    width: 70%;
+    margin-top: 20px;
+    font-size: 32px;
+    gap: 120px;
+    align-self: center;
+    border-radius: 20px;
 }
-
 .middle {
     display: flex;
     flex-grow: 1;
@@ -40,11 +44,13 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 100px;
+    color: #E80F88;
 }
 .user, .comp {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #E80F88;
 }
 .compIcon, .userIcon {
     font-size: 100px
@@ -68,10 +74,17 @@ body {
 button {
     height:120px;
     width: 120px;
+    border: 4px solid #AF0171;
+    background-color: #CBC3E3;
+    color: #4C0033;
+    border-radius: 30px;
+    font-size: 20px;
    
 }
 button:hover {
-    background-color: #CF9FFF;
+    background-color: #AF0171;
+    font-size: 60px;
+    font-weight: 500;
     
 }
 #results {
@@ -90,6 +103,9 @@ button:hover {
     padding: 20px;
     padding-left: 70px;
     padding-right: 70px;
+    font-size: 18px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
+    color: #E80F88
 }
